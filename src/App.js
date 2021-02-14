@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import './css/main.css';
-import ItemCard from './ItemCard.js';
+import ItemCard from './ItemCard';
 
 function App() {
   const item = {

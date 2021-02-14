@@ -1,7 +1,6 @@
 import React from 'react';
 export default function ItemCard(item) {
 
-
   return (
     <div className="container">
       <div className="background-element">
@@ -17,8 +16,7 @@ export default function ItemCard(item) {
 }
 
 function ShopItemFunc(item) {
-    console.log(item);
-    // const {item} = item;
+    // console.log(item);
     return (
     <div className="ItemCard">
       <div className="description">{item.item.brand}</div>
@@ -27,6 +25,7 @@ function ShopItemFunc(item) {
       <p className="description-full">{item.item.descriptionFull}</p>
       <div className="divider"></div>
       <div className="CardBottom">
+       {/* eslint-disable-next-line no-undef */}
         <div className="price">{Intl.NumberFormat('en-GB', {
           style: 'currency',
           currency: item.item.currency,
