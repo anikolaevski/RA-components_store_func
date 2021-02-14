@@ -15,22 +15,22 @@ export default function ItemCard(item) {
   )
 }
 
-function ShopItemFunc(item) {
-    // console.log(item);
+function ShopItemFunc(card) {
+    const {item} = card;
     return (
     <div className="ItemCard">
-      <div className="description">{item.item.brand}</div>
-      <h1 className="h1">{item.item.title}</h1>
-      <h3 className="h3">{item.item.description}</h3>
-      <p className="description-full">{item.item.descriptionFull}</p>
+      <div className="description">{item.brand}</div>
+      <h1 className="h1">{item.title}</h1>
+      <h3 className="h3">{item.description}</h3>
+      <p className="description-full">{item.descriptionFull}</p>
       <div className="divider"></div>
       <div className="CardBottom">
        {/* eslint-disable-next-line no-undef */}
         <div className="price">{Intl.NumberFormat('en-GB', {
           style: 'currency',
-          currency: item.item.currency,
+          currency: item.currency,
           currencyDisplay: 'symbol',
-        }).format(item.item.price)}</div>
+        }).format(item.price)}</div>
         <button className="CardAddToBasket">ДОБАВИТЬ В КОРЗИНУ</button>
       </div>
     </div>
